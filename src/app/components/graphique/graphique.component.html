@@ -8,4 +8,15 @@
       [showYAxisLabel]="true"
       xAxisLabel="Pays"
       yAxisLabel="Population">
-    </ngx-charts-bar-vertical>
+</ngx-charts-bar-vertical>
+
+<ngx-charts-pie-chart
+  [view]="[700, 400]"
+  [results]="data"
+  [legend]="true"
+  [labels]="true"
+  [doughnut]="false"
+  [gradient]="false"
+  legendTitle="Navigateurs"
+  [labelFormatting]="labelFormatting">
+</ngx-charts-pie-chart>

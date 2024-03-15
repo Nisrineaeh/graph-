@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { Pays } from '../../models/pays';
+import { Navigator } from '../../models/navigator';
 
 @Component({
   selector: 'app-graphique',
@@ -26,6 +27,30 @@ export class GraphiqueComponent {
       { "name": "Pakistan", "value": 220892340 },
       { "name": "Nigéria", "value": 206139589 },
       { "name": "Bangladesh", "value": 164689383 }
-    ];
+    ]
+
+  dataNavigator: Navigator[] = [
+    {
+      "name": "Chrome",
+      "value": 68.85
+    },
+    {
+      "name": "Firefox",
+      "value": 7.91
+    },
+    {
+      "name": "Edge",
+      "value": 6.85
+    },
+    {
+      "name": "Safari",
+      "value": 15.39
+    }
+  ];
+
+  public labelFormatting = (value: Navigator) => {
+    return `${value}%`;
+  }
+
 
 }
